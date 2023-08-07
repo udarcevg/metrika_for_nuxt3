@@ -1,0 +1,7 @@
+{
+  "name": "metrika",
+  "configKey": "yandexMetrika",
+  "compatibility": {
+    "nuxt": ">= 3.6.5"
+  }
+}
