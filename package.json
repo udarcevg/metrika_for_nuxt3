@@ -1,0 +1,45 @@
+{
+  "name": "metrika",
+  "version": "0.0.1",
+  "exports": {
+    ".": {
+      "import": "./dist/module.mjs",
+      "require": "./dist/module.cjs"
+    }
+  },
+  "type": "module",
+  "main": "./dist/module.cjs",
+  "module": "./dist/module.mjs",
+  "types": "./dist/types.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "nuxt-module-build",
+    "dev": "nuxi dev playground",
+    "dev:build": "nuxi dev playground",
+    "dev:prepare": "pnpm build --stub && nuxi prepare playground",
+    "prepack": "pnpm build",
+    "lint": "eslint --ext .js,.ts,.vue .",
+    "lint:fix": "eslint --fix --ext .js,.ts,.vue .",
+    "release": "npm run release"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@nuxt/kit": "^3.6.5",
+    "defu": "^6.1.1",
+    "pathe": "^1.0.0"
+  },
+  "devDependencies": {
+    "@nuxt/module-builder": "latest",
+    "@nuxtjs/eslint-config-typescript": "latest",
+    "@release-it/conventional-changelog": "^4.3.0",
+    "@types/node": "latest",
+    "eslint": "latest",
+    "nuxt": "^3.6.5",
+    "release-it": "^14.14.3"
+  },
+  "packageManager": "pnpm@7.17.1"
+}
