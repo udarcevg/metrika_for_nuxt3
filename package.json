@@ -33,6 +33,7 @@
     "pathe": "^1.0.0"
   },
   "devDependencies": {
+    "@nuxt/eslint-config": "^0.1.1",
     "@nuxt/module-builder": "latest",
     "@nuxtjs/eslint-config-typescript": "latest",
     "@release-it/conventional-changelog": "^4.3.0",
