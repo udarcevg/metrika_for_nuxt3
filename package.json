@@ -1,6 +1,7 @@
 {
   "name": "metrika",
   "version": "0.0.1",
+  "license": "MIT",
   "exports": {
     ".": {
       "import": "./dist/module.mjs",
@@ -16,7 +17,7 @@
   ],
   "scripts": {
     "build": "nuxt-module-build",
-    "dev": "nuxi dev playground",
+    "dev": "nuxi dev playground --dotenv .env.local",
     "dev:build": "nuxi dev playground",
     "dev:prepare": "pnpm build --stub && nuxi prepare playground",
     "prepack": "pnpm build",

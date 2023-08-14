@@ -6,12 +6,11 @@ import options from '#build/yandex-metrika.options.mjs'
 export default defineNuxtPlugin(async (nuxtApp) => {
   const { id, hostToId, isDev, consoleLog, metrikaUrl, partytown, ...metrikaOptions } = await options()
   let metrikaId = id
-  console.log(hostToId)
-
-  if (Object.entries(hostToId).length !== 0) {
+  const hostToIdObj = JSON.parse(hostToId)
+  if (Object.entries(hostToIdObj).length !== 0) {
     const host = useRequestURL().hostname
-    if (hostToId[host] !== undefined) {
-      metrikaId = hostToId[host]
+    if (hostToIdObj[host] !== undefined) {
+      metrikaId = hostToIdObj[host]
     }
   }
   let ready = false

@@ -3,5 +3,6 @@
   "configKey": "yandexMetrika",
   "compatibility": {
     "nuxt": ">= 3.6.5"
-  }
+  },
+  "version": "0.0.1"
 }

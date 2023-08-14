@@ -6,11 +6,10 @@ export default defineNuxtConfig({
   ],
   yandexMetrika: {
     id: 'XXXXXX',
-    useRuntimeConfig: true,
     consoleLog: true,
-    hostToId: {
-      'localhost': '111',
-      'test.com': '222'
-    }
+    // hostToId: {
+    //   'localhost': '111',
+    //   'test.com': '222'
+    // }
   }
 })
