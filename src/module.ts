@@ -40,7 +40,7 @@ export default defineNuxtModule<YandexMetrikaModuleOptions>({
   },
   defaults: {
     id: process.env.YANDEX_METRIKA_ID,
-    hostToId: {},
+    hostToId: JSON.parse(process.env.YANDEX_METRIKA_HOST_TO_ID),
     metrikaUrl: 'https://mc.yandex.ru/metrika',
     accurateTrackBounce: true,
     childIframe: false,
